@@ -176,7 +176,7 @@ class _HomescreenState extends State<Homescreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  const Icon(Icons.outbond_outlined,color: Color(0xFFC3C3C3),),
+                                  const Icon(Icons.offline_pin_outlined,color: Color(0xFFC3C3C3),),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment: CrossAxisAlignment.start,

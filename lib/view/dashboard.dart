@@ -12,7 +12,7 @@ class Dashboardscreen extends StatefulWidget {
 class _DashboardscreenState extends State<Dashboardscreen> {
   @override
   Widget build(BuildContext context) {
-    var  mheight=MediaQuery.of(context).size.height;
+
     var  mwidth=MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
@@ -37,21 +37,21 @@ class _DashboardscreenState extends State<Dashboardscreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+              const Padding(
+                padding: EdgeInsets.only(left: 10.0),
                 child: Text("Dashboard Design",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20),),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text('Today Shared by-Unbox Digital',style: TextStyle(color: AppColors.textcolour2,fontSize: 12),),
               ),
-              Container(
+              SizedBox(
                 height: 150,
 
                 width: mwidth*0.9,
@@ -76,7 +76,7 @@ class _DashboardscreenState extends State<Dashboardscreen> {
 
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       width: mwidth*0.56,
 
                       child: Padding(
@@ -85,14 +85,14 @@ class _DashboardscreenState extends State<Dashboardscreen> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: Text("Team",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Padding(
@@ -168,19 +168,103 @@ class _DashboardscreenState extends State<Dashboardscreen> {
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: Text("Deadline",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 13),),
                             ),
-                            Text("June 15,2021 - June 15,2032",style: TextStyle(fontSize: 12,color: AppColors.textcolour2),)
+                            const Text("June 15,2021 - June 15,2032",style: TextStyle(fontSize: 12,color: AppColors.textcolour2),),
+                            const SizedBox(
+                              height: 5,
+                            ),
+
 
                           ],
                         ),
                       ),
-                    )
+                    ),
+
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text("Project Progress",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                              color: AppColors.appcolour1,
+                          ),
+                          child: const Icon(Icons.offline_pin_outlined,color: Colors.white,size: 20,),
+                          
+                          
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("Creat user flow")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: AppColors.appcolour1,
+                          ),
+                          child: const Icon(Icons.offline_pin_outlined,color: Colors.white,size: 20,),
+
+
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("Creat Whiteframe")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: AppColors.textcolour2,
+                          ),
+
+
+
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("Transform to vitual design")
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const Text("Project Overview",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),),
+
 
 
             ],
