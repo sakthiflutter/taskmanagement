@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:floating_bottom_bar/animated_bottom_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thiranuitasksakthi/view/projectdetail.dart';
@@ -23,8 +23,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
 
   var index = 0.obs;
   List pages=[
-    Homescreen(),
-    Projectdetail(),
+    const Homescreen(),
+    const Projectdetail(),
   ];
 
   @override
@@ -99,7 +99,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                 ),
               ],
               bottomBarCenterModel: BottomBarCenterModel(
-                centerBackgroundColor: Color(0xFF9096FF),
+                centerBackgroundColor: const Color(0xFF9096FF),
                 centerIcon: const FloatingCenterButton(
                   child: Icon(
                     Icons.add,
